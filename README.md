@@ -39,5 +39,4 @@ De maneira geral ocorre um ganho bastante significativo de desempenho no tempo d
 
 2. Usando o JMC, como o tempo de execução se divide entre os diversos métodos invocados em cada caso?  
 Analisando os perfis gerados podemos perceber uma váriação considerável na distribuição do tempo entre os métodos ao utilizar o mesmo algorítmo porém com um *dataset* diferente e uma pequena variação (talvez devido ao pequeno número de amostras) ao alterar o *n_jobs*. Ao alterar o algorítmo o perfil altera bastante.  
-Independentemente do algorítmo/*dataset*/*n_jobs*/ o perfil de execução passa a maior parte do tempo em métodos invocados pelo weka, como no exemplo abaixo.
 ![XGB-RDG-1__MethodProfillingWeka](img/XGB-RDG-1__1.png)  
