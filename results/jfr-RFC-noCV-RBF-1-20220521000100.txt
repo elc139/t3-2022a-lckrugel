@@ -1,0 +1,40 @@
+[0,680s][info][jfr,startup] Started recording 1. No limit specified, using maxsize=250MB as default.
+[0,680s][info][jfr,startup] 
+[0,680s][info][jfr,startup] Use jcmd 7656 JFR.dump name=1 to copy recording data to file.
+
+Options: -dont-fetch-model -learner RandomForestClassifier -parameters max_depth=32,max_samples=1.0,n_jobs=1 -py-command python3 
+
+=== Classifier model (full training set) ===
+
+RandomForestClassifier(max_depth=32, max_samples=1.0, n_jobs=1)
+
+Time taken to build model: 103.36 seconds
+
+Time taken to test model on test split: 1.07 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances       19951               99.755  %
+Incorrectly Classified Instances        49                0.245  %
+Kappa statistic                          0.9951
+Mean absolute error                      0.0244
+Root mean squared error                  0.0747
+Relative absolute error                  4.889  %
+Root relative squared error             14.9339 %
+Total Number of Instances            20000     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,997    0,002    0,998      0,997    0,998      0,995    1,000     1,000     c0
+                 0,998    0,003    0,997      0,998    0,998      0,995    1,000     1,000     c1
+Weighted Avg.    0,998    0,002    0,998      0,998    0,998      0,995    1,000     1,000     
+
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+  9915    33 |     a = c0
+    16 10036 |     b = c1
+

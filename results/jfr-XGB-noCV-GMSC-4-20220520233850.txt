@@ -1,0 +1,49 @@
+[0,700s][info][jfr,startup] Started recording 1. No limit specified, using maxsize=250MB as default.
+[0,700s][info][jfr,startup] 
+[0,700s][info][jfr,startup] Use jcmd 5486 JFR.dump name=1 to copy recording data to file.
+
+Options: -learner XGBClassifier -parameters tree_method='hist',n_jobs=4 -py-command python3 
+
+=== Classifier model (full training set) ===
+
+XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric=None, gamma=0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.300000012, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=6, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=100,
+              n_jobs=4, num_parallel_tree=1, predictor='auto', random_state=0,
+              reg_alpha=0, reg_lambda=1, ...)
+
+Time taken to build model: 4.92 seconds
+
+Time taken to test model on test split: 0.63 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances       28111               93.7033 %
+Incorrectly Classified Instances      1889                6.2967 %
+Kappa statistic                          0.272 
+Mean absolute error                      0.0949
+Root mean squared error                  0.2211
+Relative absolute error                 76.7553 %
+Root relative squared error             89.656  %
+Total Number of Instances            30000     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,988    0,794    0,947      0,988    0,967      0,308    0,860     0,986     0
+                 0,206    0,012    0,542      0,206    0,298      0,308    0,860     0,380     1
+Weighted Avg.    0,937    0,744    0,921      0,937    0,924      0,308    0,860     0,947     
+
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 27710   339 |     a = 0
+  1550   401 |     b = 1
+
